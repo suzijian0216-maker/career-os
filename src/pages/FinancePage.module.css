@@ -1,0 +1,41 @@
+.page { padding: 24px; max-width: 1100px; margin: 0 auto; }
+.pageTitle { font-size: 22px; font-weight: 700; }
+.subtitle { font-size: 13px; color: var(--text-secondary); margin: 4px 0 16px; }
+
+.settings { display: flex; gap: 16px; margin-bottom: 16px; }
+.settingItem { display: flex; align-items: center; gap: 8px; }
+.settingItem label { font-size: 13px; color: var(--text-secondary); }
+.settingItem input { width: 80px; text-align: center; }
+
+.cardGrid { display: grid; grid-template-columns: repeat(auto-fill, minmax(240px, 1fr)); gap: 12px; margin-bottom: 16px; }
+
+.cityCard { background: var(--bg-card); border: 1px solid var(--border); border-radius: var(--radius); padding: 16px; box-shadow: var(--card-shadow); }
+.cityName { font-size: 16px; font-weight: 700; margin-bottom: 8px; }
+.cityInput { display: flex; align-items: center; gap: 8px; margin-bottom: 10px; }
+.cityInput label { font-size: 11px; color: var(--text-secondary); }
+.cityInput input { width: 80px; }
+
+.cityStats { display: flex; flex-direction: column; gap: 2px; }
+.cityStat { display: flex; justify-content: space-between; font-size: 12px; color: var(--text-secondary); padding: 2px 0; }
+.cityStat strong { color: var(--text-primary); font-family: var(--font-mono); }
+.negative { color: var(--danger) !important; }
+
+.section { background: var(--bg-card); border: 1px solid var(--border); border-radius: var(--radius); padding: 18px; box-shadow: var(--card-shadow); margin-bottom: 12px; }
+.sectionTitle { font-size: 14px; font-weight: 700; margin-bottom: 12px; }
+
+/* 柱状图 */
+.barChart { display: flex; flex-direction: column; gap: 8px; }
+.barRow { display: flex; align-items: center; gap: 10px; }
+.barLabel { font-size: 12px; font-weight: 600; width: 40px; text-align: right; }
+.barTrack { flex: 1; height: 24px; background: var(--border-light); border-radius: 4px; overflow: hidden; }
+.barFill { height: 100%; border-radius: 4px; display: flex; align-items: center; padding-left: 8px; font-size: 11px; font-weight: 700; color: #fff; min-width: 40px; transition: width 0.5s ease; }
+.barFill span { white-space: nowrap; }
+
+/* 开支 */
+.expenseGrid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 8px; }
+.expenseItem { display: flex; align-items: center; gap: 6px; font-size: 12px; color: var(--text-secondary); }
+.expenseItem input { width: 80px; }
+
+@media (max-width: 800px) {
+  .cardGrid, .expenseGrid { grid-template-columns: repeat(2, 1fr); }
+}

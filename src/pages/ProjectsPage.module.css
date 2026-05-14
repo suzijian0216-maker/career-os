@@ -1,0 +1,63 @@
+.page { padding: 24px; max-width: 1100px; margin: 0 auto; }
+
+.header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 16px; }
+.header h2 { font-size: 22px; font-weight: 700; }
+
+.addBtn { padding: 8px 16px; background: var(--accent); color: #fff; border-radius: var(--radius-sm); font-size: 13px; font-weight: 600; border: none; }
+.addBtn:hover { background: var(--accent-hover); }
+
+/* 新建表单 */
+.addForm { background: var(--bg-card); border: 1px solid var(--accent); border-radius: var(--radius); padding: 18px; margin-bottom: 16px; }
+.addForm h3 { font-size: 14px; margin-bottom: 10px; }
+.formGrid { display: flex; flex-direction: column; gap: 8px; }
+.formGrid input, .formGrid textarea, .formGrid select { width: 100%; padding: 6px 10px; }
+.tagInput input { width: 100% !important; }
+.tagList { display: flex; flex-wrap: wrap; gap: 4px; margin-top: 4px; }
+.tag { font-size: 11px; padding: 2px 8px; background: var(--bg-primary); border-radius: 10px; color: var(--text-secondary); display: inline-flex; align-items: center; gap: 4px; }
+.tag button { background: none; border: none; color: var(--text-secondary); cursor: pointer; font-size: 13px; }
+.formActions { display: flex; gap: 8px; margin-top: 8px; }
+.saveBtn { padding: 6px 16px; background: var(--accent); color: #fff; border-radius: var(--radius-sm); font-size: 12px; font-weight: 600; border: none; }
+.cancelBtn { padding: 6px 12px; background: var(--border); color: var(--text-primary); border-radius: var(--radius-sm); font-size: 12px; border: none; }
+
+/* 卡片 */
+.cardGrid { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 12px; }
+.card { background: var(--bg-card); border: 1px solid var(--border); border-radius: var(--radius); padding: 16px; box-shadow: var(--card-shadow); cursor: pointer; transition: all 0.15s; }
+.card:hover { box-shadow: var(--card-shadow-hover); border-color: var(--accent); }
+.cardTop { display: flex; align-items: center; gap: 8px; margin-bottom: 8px; }
+.cardTitle { font-size: 15px; font-weight: 600; }
+.cardTagline { font-size: 12px; color: var(--text-secondary); margin-bottom: 8px; }
+.cardTech { display: flex; flex-wrap: wrap; gap: 4px; }
+
+.statusBadge { font-size: 10px; padding: 2px 6px; border-radius: 10px; background: var(--border); color: var(--text-secondary); }
+.statusBadge.done { background: #d1fae5; color: #065f46; }
+.statusBadge.building { background: #dbeafe; color: #1e40af; }
+
+.empty { display: flex; flex-direction: column; align-items: center; justify-content: center; padding: 60px; grid-column: 1/-1; color: var(--text-secondary); gap: 12px; }
+
+/* 详情页 */
+.detail { animation: fadeIn 0.2s ease; }
+.backBtn { background: none; border: none; color: var(--accent); font-size: 13px; cursor: pointer; margin-bottom: 12px; padding: 0; }
+.backBtn:hover { text-decoration: underline; }
+
+.detailHeader { display: flex; align-items: center; gap: 10px; margin-bottom: 8px; }
+.detailHeader h2 { font-size: 22px; font-weight: 700; }
+.tagline { font-size: 15px; color: var(--text-secondary); margin-bottom: 16px; }
+
+.detailSection { margin-bottom: 16px; }
+.detailSection h3 { font-size: 14px; font-weight: 700; margin-bottom: 6px; color: var(--text-primary); }
+.detailSection p, .detailSection li { font-size: 13px; color: var(--text-secondary); line-height: 1.7; }
+.detailSection ul { padding-left: 18px; }
+
+.arch { font-family: var(--font-mono); font-size: 12px; background: var(--bg-primary); padding: 8px 12px; border-radius: var(--radius-sm); }
+
+.adr { background: var(--bg-primary); padding: 10px 12px; border-radius: var(--radius-sm); margin-bottom: 8px; }
+.adr strong { font-size: 13px; }
+.adr p { font-size: 12px; margin-top: 2px; }
+
+.detailActions { display: flex; gap: 8px; margin-top: 20px; }
+.linkBtn { padding: 6px 14px; background: var(--accent); color: #fff; border-radius: var(--radius-sm); font-size: 12px; text-decoration: none; font-weight: 600; }
+.linkBtn:hover { background: var(--accent-hover); text-decoration: none; }
+.deleteBtn { padding: 6px 14px; background: none; border: 1px solid var(--danger); color: var(--danger); border-radius: var(--radius-sm); font-size: 12px; cursor: pointer; }
+.deleteBtn:hover { background: var(--danger); color: #fff; }
+
+@media (max-width: 800px) { .cardGrid { grid-template-columns: 1fr; } }

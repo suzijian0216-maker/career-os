@@ -1,0 +1,47 @@
+.wrapper {
+  width: 100%;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 4px;
+  font-size: 12px;
+}
+
+.label {
+  color: var(--text-primary);
+  font-weight: 500;
+}
+
+.percent {
+  color: var(--text-secondary);
+  font-weight: 600;
+  font-size: 11px;
+  font-family: var(--font-mono);
+}
+
+.track {
+  width: 100%;
+  background: var(--border-light);
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.fill {
+  border-radius: 10px;
+  background: var(--accent);
+  transition: width 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.animated {
+  background: linear-gradient(90deg, var(--accent), var(--accent2), var(--accent));
+  background-size: 200% 100%;
+  animation: shimmer 2s linear infinite;
+}
+
+@keyframes shimmer {
+  0% { background-position: 200% 0; }
+  100% { background-position: -200% 0; }
+}

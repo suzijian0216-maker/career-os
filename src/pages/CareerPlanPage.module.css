@@ -1,0 +1,69 @@
+.page { padding: 24px; max-width: 1100px; margin: 0 auto; }
+.section { background: var(--bg-card); border: 1px solid var(--border); border-radius: var(--radius); padding: 18px; box-shadow: var(--card-shadow); margin-bottom: 16px; }
+.title { font-size: 14px; font-weight: 700; margin-bottom: 12px; color: var(--text-primary); }
+.hint { font-size: 11px; color: var(--text-secondary); margin-bottom: 12px; }
+
+/* 预设按钮 */
+.presets { display: flex; gap: 8px; flex-wrap: wrap; margin-bottom: 8px; }
+.presetBtn {
+  padding: 6px 14px; border: 1px solid var(--border); border-radius: 20px;
+  background: var(--bg-card); color: var(--text-secondary); font-size: 12px;
+  cursor: pointer; transition: all 0.15s;
+}
+.presetBtn:hover { border-color: var(--accent); color: var(--accent); }
+.presetActive { background: var(--accent); color: #fff; border-color: var(--accent); }
+.presetDesc { font-size: 12px; color: var(--text-secondary); }
+
+/* 网格 */
+.grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+
+/* 滑块 */
+.sliders { display: flex; flex-direction: column; gap: 10px; }
+.sliderRow { display: flex; align-items: center; gap: 10px; }
+.sliderLabel { font-size: 12px; width: 100px; flex-shrink: 0; color: var(--text-primary); }
+.slider { flex: 1; height: 4px; -webkit-appearance: none; appearance: none; background: var(--border); border-radius: 2px; outline: none; padding: 0; border: none; }
+.slider::-webkit-slider-thumb { -webkit-appearance: none; width: 16px; height: 16px; border-radius: 50%; background: var(--accent); cursor: pointer; }
+.sliderVal { font-size: 11px; font-weight: 700; color: var(--accent); font-family: var(--font-mono); width: 28px; text-align: right; }
+
+/* 排名 */
+.rankList { display: flex; flex-direction: column; gap: 8px; }
+.rankItem { display: flex; align-items: center; gap: 10px; padding: 8px; border-radius: var(--radius-sm); }
+.rankTop { background: var(--bg-primary); }
+.rankBadge { width: 24px; height: 24px; border-radius: 50%; color: #fff; display: flex; align-items: center; justify-content: center; font-size: 11px; font-weight: 700; flex-shrink: 0; }
+.rankInfo { flex: 1; }
+.rankName { font-size: 13px; font-weight: 600; }
+.rankCity { font-size: 10px; color: var(--text-secondary); font-weight: 400; margin-left: 6px; }
+.rankBar { height: 6px; background: var(--border-light); border-radius: 3px; margin-top: 4px; }
+.rankFill { height: 100%; border-radius: 3px; transition: width 0.5s ease; }
+.rankScore { font-size: 14px; font-weight: 700; font-family: var(--font-mono); }
+
+/* 四向卡片 */
+.cardGrid { display: grid; grid-template-columns: repeat(auto-fill, minmax(240px, 1fr)); gap: 12px; }
+.pathCard { background: var(--bg-primary); border-radius: var(--radius); padding: 14px; border: 1px solid var(--border); }
+.cardHeader { display: flex; align-items: center; gap: 6px; margin-bottom: 10px; }
+.cardIcon { font-size: 18px; }
+.cardName { font-size: 14px; font-weight: 600; flex: 1; }
+.cardScore { font-size: 16px; font-weight: 800; font-family: var(--font-mono); }
+
+.cardStats { margin-bottom: 10px; }
+.statRow { display: flex; justify-content: space-between; padding: 3px 0; font-size: 12px; color: var(--text-secondary); border-bottom: 1px solid var(--border-light); }
+.statRow strong { color: var(--text-primary); }
+
+.cardDiary { margin-bottom: 8px; font-size: 12px; }
+.cardDiary summary { cursor: pointer; color: var(--accent); font-weight: 600; font-size: 12px; }
+.cardDiary p { margin-top: 6px; color: var(--text-secondary); line-height: 1.7; font-size: 12px; }
+
+.cardRegret { font-size: 11px; color: var(--text-secondary); }
+.regretTag { display: inline-block; margin: 2px 4px; padding: 1px 6px; background: var(--border-light); border-radius: 8px; font-size: 10px; }
+
+/* 表格 */
+.tableWrap { overflow-x: auto; }
+.table { width: 100%; border-collapse: collapse; font-size: 12px; }
+.table th, .table td { padding: 8px 10px; text-align: center; border-bottom: 1px solid var(--border); }
+.table th { background: var(--bg-primary); font-weight: 600; color: var(--text-secondary); font-size: 11px; }
+.table td { color: var(--text-primary); }
+.table td:first-child { text-align: left; font-weight: 500; color: var(--text-secondary); }
+
+@media (max-width: 800px) {
+  .grid, .cardGrid { grid-template-columns: 1fr; }
+}

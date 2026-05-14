@@ -1,0 +1,58 @@
+.page { padding: 24px; max-width: 1100px; margin: 0 auto; }
+
+/* 成就 Toast */
+.achieveToast { position: fixed; top: 40px; right: 20px; z-index: 1000; display: flex; flex-direction: column; gap: 8px; animation: fadeIn 0.3s ease; }
+.achieveItem { background: var(--accent); color: #fff; padding: 12px 20px; border-radius: var(--radius); font-size: 14px; font-weight: 600; box-shadow: 0 4px 16px rgba(0,0,0,0.2); }
+
+/* 倒计时 */
+.countdownRow { display: grid; grid-template-columns: repeat(4, 1fr); gap: 12px; margin-bottom: 16px; }
+.countdown { background: var(--bg-card); border: 1px solid var(--border); border-radius: var(--radius); padding: 14px; text-align: center; box-shadow: var(--card-shadow); }
+.cdName { font-size: 12px; color: var(--text-secondary); }
+.cdDays { font-size: 28px; font-weight: 800; font-family: var(--font-mono); margin: 4px 0; }
+.cdLabel { font-size: 10px; color: var(--text-sidebar-dim); }
+
+/* 网格 */
+.grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-bottom: 16px; }
+
+.section { background: var(--bg-card); border: 1px solid var(--border); border-radius: var(--radius); padding: 18px; box-shadow: var(--card-shadow); }
+.title { font-size: 14px; font-weight: 700; margin-bottom: 12px; }
+
+/* TODO */
+.todoInput { display: flex; gap: 6px; margin-bottom: 10px; }
+.todoInput input { flex: 1; padding: 6px 10px; font-size: 12px; }
+.todoInput button { padding: 6px 12px; background: var(--accent); color: #fff; border-radius: var(--radius-sm); font-size: 14px; font-weight: 700; border: none; }
+
+.todoList { max-height: 340px; overflow-y: auto; }
+.todoItem { display: flex; align-items: center; gap: 8px; padding: 6px 0; font-size: 13px; cursor: pointer; border-bottom: 1px solid var(--border-light); }
+.todoItem input[type="checkbox"] { accent-color: var(--accent); }
+.todoItem span { flex: 1; }
+.todoDone { opacity: 0.4; text-decoration: line-through; }
+.todoDel { opacity: 0; background: none; border: none; color: var(--danger); cursor: pointer; font-size: 16px; padding: 0 4px; }
+.todoItem:hover .todoDel { opacity: 1; }
+
+.doneGroup { margin-top: 8px; font-size: 11px; }
+.doneGroup summary { cursor: pointer; color: var(--text-secondary); }
+
+.emptyText { text-align: center; color: var(--text-secondary); padding: 20px; font-size: 13px; }
+
+/* 成就墙 */
+.achieveGrid { display: grid; grid-template-columns: repeat(auto-fill, minmax(130px, 1fr)); gap: 8px; }
+.achieveCard { padding: 10px; border-radius: var(--radius-sm); text-align: center; border: 1px solid var(--border); }
+.achieveUnlocked { background: var(--bg-primary); }
+.achieveLocked { opacity: 0.4; }
+.achieveIcon { font-size: 24px; margin-bottom: 4px; }
+.achieveName { font-size: 11px; font-weight: 600; }
+.achieveDesc { font-size: 10px; color: var(--text-secondary); margin-top: 2px; }
+.achieveDate { font-size: 9px; color: var(--accent2); margin-top: 4px; font-family: var(--font-mono); }
+
+/* 数据面板 */
+.dashGrid { display: grid; grid-template-columns: repeat(6, 1fr); gap: 10px; }
+.dashCard { text-align: center; padding: 12px 8px; background: var(--bg-primary); border-radius: var(--radius-sm); }
+.dashValue { font-size: 22px; font-weight: 700; color: var(--accent); font-family: var(--font-mono); }
+.dashLabel { font-size: 10px; color: var(--text-secondary); margin-top: 4px; text-transform: uppercase; letter-spacing: 0.5px; }
+
+@media (max-width: 800px) {
+  .countdownRow { grid-template-columns: repeat(2, 1fr); }
+  .grid { grid-template-columns: 1fr; }
+  .dashGrid { grid-template-columns: repeat(3, 1fr); }
+}
